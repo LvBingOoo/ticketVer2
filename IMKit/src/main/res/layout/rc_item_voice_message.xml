@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/rc_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+    <TextView
+        android:layout_centerVertical="true"
+        android:id="@id/rc_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:textColor="#8e9295"
+        android:textSize="14sp" />
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_toRightOf="@id/rc_left"
+        android:id="@+id/rc_img_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:maxWidth="230dp"
+        android:minWidth="52dp">
+
+        <ImageView
+            android:id="@id/rc_img"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:scaleType="fitStart" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/rc_img_rl"
+        android:id="@id/rc_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:textColor="#8e9295"
+        android:textSize="14sp" />
+    <ImageView
+        android:id="@+id/rc_voice_unread"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/rc_voice_unread" />
+
+</RelativeLayout>

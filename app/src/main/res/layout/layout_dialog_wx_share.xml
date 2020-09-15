@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#44000000" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="30dp"
+            android:gravity="center"
+            android:background="@drawable/shape_bg_white"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="推广链接已复制"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tvContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="14dp"
+                android:background="#ececec"
+                android:minHeight="80dp"
+                android:padding="6dp"
+                android:paddingBottom="30dp"
+                tools:text="http://www.qq.com" />
+
+            <TextView
+                android:id="@+id/tvShare"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:background="@drawable/shape_bg_wx"
+                android:drawableStart="@mipmap/icon_wx"
+                android:gravity="center"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:drawablePadding="4dp"
+                android:text="去微信粘贴给好友"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_close_white" />
+    </LinearLayout>
+
+
+</FrameLayout>

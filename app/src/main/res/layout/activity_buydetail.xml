@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/buydetail_root"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <include layout="@layout/w_common_toolbar_home_nosysfit_black"/>
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/buy_detail_issue_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:textColor="#8f929a"
+                        android:text="第20188883期"/>
+                    <TextView
+                        android:id="@+id/buy_detail_issue_tv2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:textColor="#8f929a"
+                        android:text="投注截止时间"/>
+                    <include layout="@layout/layout_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/buydetail_kj_issue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:textColor="#8f929a"
+                        android:text="第201129期 开奖号码"/>
+                    <android.support.v7.widget.RecyclerView
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/buy_detail_last_award_recyclerview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.github.jdsjlzx.recyclerview.LRecyclerView
+        android:layout_marginTop="140dp"
+        android:id="@+id/home_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

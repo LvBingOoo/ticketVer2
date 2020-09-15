@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选择玩法"
+            android:textSize="14sp"
+            android:textColor="@color/color_text_main_black"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
+        <com.github.jdsjlzx.recyclerview.LRecyclerView
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:id="@+id/dialog_gametype_recycleview"/>
+        <LinearLayout
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="35dp">
+            <FrameLayout
+                android:id="@+id/dialog_hemai_cancle"
+                android:layout_weight="0.4"
+                android:background="@drawable/ripple_bt_black"
+                android:layout_width="0dp"
+                android:clickable="true"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:text="取消"/>
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/dialog_hemai_ok"
+                android:layout_weight="0.6"
+                android:layout_marginLeft="10dp"
+                android:clickable="true"
+                android:background="@drawable/ripple_bt_red_small"
+                android:layout_width="0dp"
+                android:layout_height="35dp">
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:text="确定"/>
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

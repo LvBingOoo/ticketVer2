@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@drawable/bg_rect_corners_home_top_icon"
+        android:visibility="gone" />
+
+    <cn.bingoogolapple.bgabanner.BGABanner xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/banner_guide_content"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="@color/white"
+        app:banner_pageChangeDuration="6000"
+        app:banner_pointAutoPlayAble="true"
+        app:banner_pointContainerBackground="@android:color/transparent"
+        app:banner_pointTopBottomMargin="2dp" />
+
+    <View style="@style/divider_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingTop="14dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="14dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/home_flipper_logo" />
+
+        <View
+            style="@style/divider_vertical"
+            android:layout_height="40dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="14dp" />
+
+        <ViewFlipper
+            android:id="@+id/item_viewf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoStart="true"
+            android:background="#fff"
+            android:flipInterval="3000"
+            android:inAnimation="@anim/bottom_in"
+            android:outAnimation="@anim/top_out" />
+    </LinearLayout>
+
+    <View
+        style="@style/divider_horizontal"
+        android:layout_height="10dp"
+        android:background="@color/bg_gray" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:drawableLeft="@mipmap/home_div_v"
+        android:drawablePadding="5dp"
+        android:gravity="center_vertical"
+        android:lines="1"
+        android:padding="10dp"
+        android:text="大家在玩"
+        android:textColor="@color/color_text_main_black_001"
+        android:textSize="15sp" />
+
+    <View style="@style/divider_horizontal" />
+
+    <com.github.jdsjlzx.recyclerview.LRecyclerView
+        android:id="@+id/item_recyclerview_type01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white" />
+
+
+    <View
+        style="@style/divider_horizontal"
+        android:layout_height="10dp"
+        android:background="@color/bg_gray" />
+</LinearLayout>

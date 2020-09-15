@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:background="@color/dialog_gray"
+        android:padding="10dp" >
+        <Button
+            android:id="@+id/btn_city_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentLeft="true"
+            android:background="@null"
+            android:paddingRight="20dp"
+            android:textColor="#0048fc"
+            android:textSize="18sp"
+            android:text="取消">
+             </Button>
+        <Button
+            android:id="@+id/btn_city_sure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+           android:textColor="#0048fc"
+           android:text="确定"
+           android:paddingLeft="20dp"
+           android:textSize="18sp"
+            android:layout_weight="1" >
+        </Button>
+    </RelativeLayout>
+    <com.cc.util.citypicker.CityPicker
+          xmlns:su="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/citypicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" 
+        android:layout_centerInParent="true"
+        android:gravity="center" /> 
+
+</LinearLayout>

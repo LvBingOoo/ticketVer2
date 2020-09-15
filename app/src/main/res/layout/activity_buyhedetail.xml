@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/buyhedetail_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/w_common_toolbar_home_nosysfit_black"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/buyhe_bottom_rl"
+            android:layout_alignParentBottom="true"
+            android:background="#fafafa"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <View style="@style/divider_horizontal"
+                android:layout_alignParentTop="true"/>
+            <include layout="@layout/layout_add_reduce"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"/>
+            <TextView
+                android:id="@+id/buyhe_ok"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textSize="15sp"
+                android:text="认购"
+                android:background="@drawable/bg_rect_corners_red"/>
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_above="@id/buyhe_bottom_rl"
+            android:fillViewport="true"
+            android:background="@drawable/bg_rect_corners_home_top_icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <include layout="@layout/item_homebuyhe"/>
+                <View style="@style/divider_horizontal"
+                    android:layout_height="10dp"
+                    android:background="@color/bg_gray"/>
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@mipmap/home_div_v"
+                    android:drawablePadding="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:gravity="center_vertical"
+                    android:text="方案内容"
+                    android:textSize="14sp"
+                    android:textColor="@color/color_text_main_black"/>
+                <View style="@style/divider_horizontal"/>
+                <LinearLayout
+                    android:id="@+id/bh_fa"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!--<include layout="@layout/buyhe_fa"/>-->
+                </LinearLayout>
+                <View style="@style/divider_horizontal"
+                    android:layout_height="10dp"
+                    android:background="@color/bg_gray"/>
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@mipmap/home_div_v"
+                    android:drawablePadding="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:gravity="center_vertical"
+                    android:text="执行情况"
+                    android:textSize="14sp"
+                    android:textColor="@color/color_text_main_black"/>
+                <View style="@style/divider_horizontal"/>
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_text_main_black"
+                        android:text="期号"
+                        android:textSize="12sp"/>
+                    <TextView
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_text_main_black"
+                        android:text="倍数（倍）"
+                        android:textSize="12sp"/>
+                    <TextView
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_text_main_black"
+                        android:text="状态"
+                        android:textSize="12sp"/>
+                    <ImageView
+                        android:visibility="invisible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/a_right_cion"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/bd_issue_ll"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!--<include layout="@layout/layout_buyhe_de_zxqk"/>
+                    <include layout="@layout/layout_buyhe_de_zxqk"/>-->
+                </LinearLayout>
+
+
+                <View style="@style/divider_horizontal"
+                    android:background="@color/bg_gray"
+                    android:layout_height="10dp"/>
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@mipmap/home_div_v"
+                    android:drawablePadding="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:gravity="center_vertical"
+                    android:text="认购用户"
+                    android:textSize="14sp"
+                    android:textColor="@color/color_text_main_black"/>
+                <View style="@style/divider_horizontal"/>
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_text_main_black"
+                        android:text="用户名"
+                        android:textSize="12sp"/>
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_text_main_black"
+                        android:text="认购金额"
+                        android:textSize="12sp"/>
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_text_main_black"
+                        android:text="所占股份"
+                        android:textSize="12sp"/>
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_text_main_black"
+                        android:text="中奖金额"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/hed_user_ll"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!--<include layout="@layout/layout_buyhe_de_rgyh"/>
+                    <include layout="@layout/layout_buyhe_de_rgyh"/>-->
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+</LinearLayout>

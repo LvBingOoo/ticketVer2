@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:id="@+id/axqk_issue"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_text_main_black"
+        android:text="第233322期"
+        android:singleLine="true"
+        android:textSize="12sp"/>
+    <TextView
+        android:id="@+id/axqk_betmutt"
+        android:layout_weight="0.5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_text_main_black"
+        android:singleLine="true"
+        android:text="7"
+        android:textSize="12sp"/>
+    <TextView
+        android:id="@+id/axqk_status"
+        android:layout_weight="0.5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_text_green"
+        android:singleLine="true"
+        android:text="进行中"
+        android:textSize="12sp"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/a_right_cion"/>
+</LinearLayout>

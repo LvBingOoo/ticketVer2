@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/a_top_big_bg"/>
+    <include layout="@layout/w_common_toolbar_home_nosysfit"
+        android:id="@+id/award_topbar"
+        android:layout_marginTop="@dimen/topbar_hegiht_top"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"/>
+    <com.github.jdsjlzx.recyclerview.LRecyclerView
+        android:layout_below="@id/award_topbar"
+        android:id="@+id/home_award_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</RelativeLayout>

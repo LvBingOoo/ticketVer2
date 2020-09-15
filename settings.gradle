@@ -1,0 +1,1 @@
+include ':app', ':library', ':LRecyclerview_library', ':photopicker', ':IMLib', ':IMKit'

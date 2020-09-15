@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pay_bank_ll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/pay_bankpay"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/item_pay_img"/>
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_toRightOf="@id/item_pay_img"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/item_pay_title"
+                android:textColor="@color/color_text_main_black"
+                android:textSize="@dimen/sp_14"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:drawablePadding="8dp"
+            android:drawableRight="@mipmap/a_right_cion"
+            android:textColor="@color/color_text_main_black"
+            android:textSize="@dimen/sp_16"/>
+    </RelativeLayout>
+    <TextView style="@style/divider_horizontal"/>
+</LinearLayout>

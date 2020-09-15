@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2015 [1076559197@qq.com | tchen0707@gmail.com]
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License”);
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~    http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+
+    <style name="AppTheme" parent="AppTheme.Base" />
+
+    <style name="AppTheme.NoneTranslucent" parent="AppTheme.Base">
+        <item name="android:windowIsTranslucent">false</item>
+    </style>
+
+    <style name="AppTheme.Translucent" parent="AppTheme.Base">
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorAccent">#999999</item>
+
+        <item name="android:windowNoTitle">true</item>
+        <!--<item name="android:windowIsTranslucent">true</item>-->
+        <!--<item name="android:windowContentOverlay">@android:color/transparent</item>-->
+        <item name="android:windowBackground">@color/bg_gray</item>
+    </style>
+
+    <style name="Theme.SmoothProgressBarDefaults" parent="Theme.AppCompat">
+        <item name="cpbStyle">@style/CircularProgressBar</item>
+    </style>
+
+    <style name="CPB" parent="Widget.AppCompat.ProgressBar" />
+
+    <style name="CircularProgressBar" parent="CPB">
+        <item name="cpb_color">@color/cpb_default_color</item>
+        <item name="cpb_stroke_width">@dimen/cpb_default_stroke_width</item>
+        <item name="cpb_min_sweep_angle">@integer/cpb_default_min_sweep_angle</item>
+        <item name="cpb_max_sweep_angle">@integer/cpb_default_max_sweep_angle</item>
+        <item name="cpb_sweep_speed">@string/cpb_default_sweep_speed</item>
+        <item name="cpb_rotation_speed">@string/cpb_default_rotation_speed</item>
+    </style>
+
+    <style name="SwipeBackLayout">
+        <item name="edge_size">0dp</item>
+    </style>
+
+    <!-- MyDialog===================================start -->
+    <!-- Dialog样式 -->
+    <style name="DialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item><!--  边框-->
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">false</item><!--半透明-->
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="DialogStyleTrans" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowAnimationStyle">@style/dialogAnim</item>
+    </style>
+
+    <style name="dialogAnim" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_show</item>
+        <item name="android:windowExitAnimation">@anim/dialog_dismiss</item>
+    </style>
+
+    <style name="dialogAnim_uptodown" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/top_in2</item>
+        <item name="android:windowExitAnimation">@anim/top_out2</item>
+    </style>
+
+    <style name="divider_horizontal"><!-- 水平分割线 -->
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0.5px</item>
+        <item name="android:background">@color/div_gray</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="divider_vertical"><!-- 垂直分割线 -->
+        <item name="android:layout_width">0.5px</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:background">#e5e5e5</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="alertView" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/alert_bg</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <!-- MyDialog===================================end -->
+    <!-- 自定义加载  dialog -->
+    <style name="loading_dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowBackground">@drawable/bg_loading</item><!--背景透明-->
+    </style>
+
+    <style name="noAnimation" parent="AppTheme.NoneTranslucent">
+        <item name="android:activityOpenEnterAnimation">@null</item>
+        <item name="android:activityOpenExitAnimation">@null</item>
+        <item name="android:activityCloseEnterAnimation">@null</item>
+        <item name="android:activityCloseExitAnimation">@null</item>
+        <item name="android:taskOpenEnterAnimation">@null</item>
+        <item name="android:taskOpenExitAnimation">@null</item>
+        <item name="android:taskCloseEnterAnimation">@null</item>
+        <item name="android:taskCloseExitAnimation">@null</item>
+        <item name="android:taskToFrontEnterAnimation">@null</item>
+        <item name="android:taskToFrontExitAnimation">@null</item>
+        <item name="android:taskToBackEnterAnimation">@null</item>
+        <item name="android:taskToBackExitAnimation">@null</item>
+    </style>
+
+    <style name="InputTextView">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:gravity">center</item>
+        <item name="android:inputType">textPassword</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:background">@android:color/white</item>
+    </style>
+
+    <style name="MyDialogBord" parent="android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">#00000000</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+</resources>

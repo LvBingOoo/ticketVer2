@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="2dp"
+    android:paddingBottom="2dp"
+    android:layout_width="match_parent"
+    android:gravity="center_vertical"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:id="@+id/item_awardrecord_issue"
+        android:layout_weight="1"
+        android:singleLine="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="201722883773"
+        android:textSize="@dimen/text_size_12"
+        android:textColor="#8f929a"/>
+    <TextView
+        android:id="@+id/item_awardrecord_ing_tv"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:singleLine="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:text="开奖中..."
+        android:textSize="@dimen/text_size_12"
+        android:textColor="#82e012"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/item_awardrecord_recyclerview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/item_awardrecord_opentime"
+        android:layout_weight="1"
+        android:singleLine="true"
+        android:gravity="right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2017-11-01 12:23"
+        android:textSize="@dimen/text_size_12"
+        android:textColor="#8f929a"/>
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.hhhc.obsessive.library.widgets.XViewPager
+        android:id="@+id/home_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/fragment_images_tab_smart"
+        android:layout_weight="1" />
+
+    <View style="@style/divider_horizontal" />
+
+    <com.hhhc.obsessive.library.smartlayout.SmartTabLayout
+        android:id="@+id/fragment_images_tab_smart"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:background="#fafafa"
+        android:fillViewport="false"
+        app:stl_defaultTabTextAllCaps="true"
+        app:stl_distributeEvenly="true"
+        app:stl_dividerThickness="0dp"
+        app:stl_indicatorCornerRadius="0dp"
+        app:stl_indicatorInterpolation="smart"
+        app:stl_indicatorThickness="0dp"
+        app:stl_overlineThickness="0dp"
+        app:stl_underlineThickness="0dp" />
+</LinearLayout>
+

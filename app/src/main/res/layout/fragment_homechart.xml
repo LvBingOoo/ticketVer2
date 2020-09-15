@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+   <!-- <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/a_top_big_bg"/>
+    <include layout="@layout/w_common_toolbar_home_nosysfit"
+        android:layout_marginTop="@dimen/topbar_hegiht_top"
+        android:id="@+id/chart_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/topbar_hegiht" />
+    <fragment
+        android:layout_below="@id/chart_top"
+        android:id="@+id/conversation"
+        android:name="io.rong.imkit.fragment.ConversationFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />-->
+</RelativeLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/bg_rect_corners_home_top_icon"
+    android:id="@+id/item_homearward_fl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/item_homeaward_name"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textSize="13sp"
+            android:textColor="@color/color_text_main_black"
+            android:text="重庆时时彩"/>
+        <TextView
+            android:id="@+id/item_homeaward_issue"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textSize="12sp"
+            android:textColor="@color/color_text_main_gray"
+            android:text="第201883773期 开奖号码"/>
+        <android.support.v7.widget.RecyclerView
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:id="@+id/item_award_recyclerview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/item_homeaward_right_fl"
+        android:layout_gravity="right"
+        android:layout_marginRight="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/home_award_note"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="9sp"
+            android:text="60s"
+            android:textColor="@color/white"
+            android:layout_marginTop="3dp"
+            android:layout_gravity="center_horizontal"/>
+    </FrameLayout>
+
+</FrameLayout>

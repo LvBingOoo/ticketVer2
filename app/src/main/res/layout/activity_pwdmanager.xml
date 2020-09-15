@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <include layout="@layout/w_common_toolbar"/>
+    <LinearLayout
+        android:id="@+id/pwdm_login_ll"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_text_main_black"
+            android:textSize="14sp"
+            android:text="重置登录密码"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/a_right_cion"/>
+    </LinearLayout>
+    <View style="@style/divider_horizontal"/>
+    <LinearLayout
+        android:id="@+id/pwdm_pay_ll"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/pwdm_pay_tv"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_text_main_black"
+            android:textSize="14sp"
+            android:text="重置支付密码"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/a_right_cion"/>
+    </LinearLayout>
+    <View style="@style/divider_horizontal"/>
+</LinearLayout>

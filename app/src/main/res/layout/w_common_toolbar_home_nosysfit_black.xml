@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2015 [1076559197@qq.com | tchen0707@gmail.com]
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License”);
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~    http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@mipmap/a_top_bg"
+    android:gravity="bottom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/topbar_hegiht">
+
+        <ImageView
+            android:id="@+id/topbar_left_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/topbar_left"
+            android:paddingLeft="@dimen/margin_size_28_14dp"
+            android:paddingRight="@dimen/margin_size_28_14dp"/>
+
+        <TextView
+            android:id="@+id/topbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_18" />
+
+        <ImageView
+            android:id="@+id/topbar_right_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right|center_vertical"
+            android:paddingBottom="@dimen/margin_size_16_8dp"
+            android:paddingLeft="@dimen/margin_size_28_14dp"
+            android:paddingRight="@dimen/margin_size_28_14dp"
+            android:paddingTop="@dimen/margin_size_16_8dp" />
+
+        <TextView
+            android:id="@+id/topbar_right_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/topbar_title"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right|center_vertical"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="12sp"
+            android:paddingRight="12sp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_14" />
+    </RelativeLayout>
+
+    <!--<View style="@style/divider_horizontal"/>-->
+</LinearLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <include layout="@layout/w_common_toolbar"
+        android:id="@+id/wallet_topbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wallet_topbar"
+        android:orientation="vertical" >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/white"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:id="@+id/recharge_money"
+                android:text="充值金额："
+                android:textColor="@color/color_text_main_black"
+                android:textSize="14sp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/recharge_money_et"
+                android:singleLine="true"
+                android:hint="请输入充值金额"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/recharge_money"
+                android:padding="8dp"
+                android:background="@null"
+                android:inputType="numberDecimal" android:textSize="12sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"/>
+        </RelativeLayout>
+        <TextView style="@style/divider_horizontal"/>
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/color_text_main_gray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:id="@+id/paydetail_noti"
+            android:text="@string/pay_notic"/>
+        <Button
+            android:layout_marginLeft="@dimen/margin_size_40_20dp"
+            android:layout_marginRight="@dimen/margin_size_40_20dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/ripple_bt_red"
+            android:text="确定充值"
+            android:id="@+id/recharge_ok_bt"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+    </LinearLayout>
+</RelativeLayout>

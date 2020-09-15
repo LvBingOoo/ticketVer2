@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:id="@+id/layout_tools_tv"
+        style="@style/style_buy_qdxdsq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+</FrameLayout>

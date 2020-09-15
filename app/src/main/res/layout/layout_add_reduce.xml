@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:background="#fafafa"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_rect_gray"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp">
+        <ImageView
+            android:id="@+id/count_reduce_iv"
+            android:padding="10dp"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:src="@mipmap/reduce"/>
+        <View style="@style/divider_vertical"/>
+        <EditText
+            android:digits="0123456789"
+            android:inputType="number"
+            android:id="@+id/count_input_tv"
+            android:maxLength="4"
+            android:layout_marginTop="1px"
+            android:layout_marginBottom="1px"
+            android:background="@color/white"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            android:textColor="@color/color_text_main_gray"
+            android:text="1"/>
+        <View style="@style/divider_vertical"/>
+        <ImageView
+            android:id="@+id/count_add_iv"
+            android:padding="10dp"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:src="@mipmap/add"/>
+    </LinearLayout>
+</FrameLayout>

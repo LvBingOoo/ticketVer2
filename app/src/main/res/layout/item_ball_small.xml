@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ball_root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <FrameLayout
+        android:layout_marginTop="2dp"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:background="@mipmap/a_roll"
+        android:layout_width="25dp"
+        android:layout_height="25dp">
+        <TextView
+            android:id="@+id/item_ball_num"
+            android:layout_gravity="center"
+            android:layout_marginBottom="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8"
+            android:textColor="@color/white"
+            android:textSize="12sp"/>
+    </FrameLayout>
+</FrameLayout>

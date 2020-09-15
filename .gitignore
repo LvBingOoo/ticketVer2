@@ -1,0 +1,14 @@
+# Project exclude paths
+/.gradle/
+/app/build/
+/app/build/intermediates/classes/debug/
+/IMKit/build/
+/IMKit/build/intermediates/classes/debug/
+/IMLib/build/
+/IMLib/build/intermediates/classes/debug/
+/library/build/
+/library/build/intermediates/classes/debug/
+/LRecyclerview_library/build/
+/LRecyclerview_library/build/intermediates/classes/debug/
+/photopicker/build/
+/photopicker/build/intermediates/classes/debug/

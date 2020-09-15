@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="vertical" android:background="@color/white"
+    android:layout_height="wrap_content">
+    <View style="@style/divider_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="10dp" android:background="@color/bg_gray"/>
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+        <FrameLayout
+            android:id="@+id/item_buy_type2_clear_list"
+            android:layout_weight="0.4"
+            android:background="@drawable/ripple_bt_black"
+            android:layout_width="0dp"
+            android:clickable="true"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:drawableLeft="@mipmap/buy_detail_03"
+                android:drawablePadding="5dp"
+                android:text="清空列表"/>
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/item_buy_type2_add_list"
+            android:layout_weight="0.6"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"
+            android:background="@drawable/ripple_bt_green"
+            android:layout_width="0dp"
+            android:layout_height="35dp">
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:drawableLeft="@mipmap/buy_detail_04"
+                android:drawablePadding="5dp"
+                android:text="添加至投注列表"/>
+        </FrameLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:drawableLeft="@mipmap/home_div_v"
+        android:drawablePadding="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="投注列表"
+        android:textSize="14sp"
+        android:textColor="@color/color_text_main_black_001"/>
+    <LinearLayout
+        android:id="@+id/item_buy_type2_bet_list"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:background="@color/bg_gray"
+        android:orientation="vertical"
+        android:minHeight="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--<include layout="@layout/layout_tzlb"/>
+        <include layout="@layout/layout_tzlb"/>-->
+    </LinearLayout>
+
+    <View style="@style/divider_horizontal"
+        android:layout_height="10dp" android:background="@color/bg_gray"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="40dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:textColor="@color/color_text_main_black"
+            android:text="倍数："/>
+        <include layout="@layout/layout_add_reduce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <View style="@style/divider_horizontal"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="40dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:textColor="@color/color_text_main_black"
+            android:text="已选："/>
+        <TextView
+            android:id="@+id/buy_detail_type2_yx_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/color_text_main_black"
+            android:text=""/>
+        <TextView
+            android:id="@+id/buy_detail_type2_yx_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/color_text_red"
+            android:text=""/>
+    </LinearLayout>
+    <View style="@style/divider_horizontal"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="40dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:textColor="@color/color_text_main_black"
+            android:text="是否追期："/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/item_buy_detail_type2_issue_tv"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="14dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_text_main_black"
+                android:textSize="14sp"/>
+            <ImageView
+                android:layout_marginLeft="5dp"
+                android:id="@+id/item_buy_detail_type2_issue_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/selector_choice"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <View style="@style/divider_horizontal"/>
+
+    <LinearLayout
+        android:id="@+id/item_buy_detail_type2_tzfs"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="40dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:textColor="@color/color_text_main_black"
+            android:text="投注方式："/>
+        <TextView
+            android:id="@+id/item_buy_detail_type2_tzfs_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/color_text_main_black"
+            android:drawableRight="@mipmap/a_right_cion"
+            android:gravity="center"
+            android:drawablePadding="5dp"
+            android:text="单买"/>
+    </LinearLayout>
+
+    <View style="@style/divider_horizontal"
+        android:layout_height="10dp" android:background="@color/bg_gray"/>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/bottom_total_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/color_text_red"
+            android:text="0元"/>
+    </LinearLayout>
+    <Button
+        android:layout_marginLeft="@dimen/margin_size_40_20dp"
+        android:layout_marginRight="@dimen/margin_size_40_20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/ripple_bt_red"
+        android:text="立即投注"
+        android:id="@+id/buy_ok"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+</LinearLayout>

@@ -1,0 +1,4 @@
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#56a8ac">
+    <item  android:drawable="@mipmap/buy_detail_05"/>
+</ripple>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--<item android:drawable="@drawable/rc_ext_voice_btn_hover" android:state_pressed="true"/>
+    <item android:drawable="@drawable/rc_ext_voice_btn_normal"/>-->
+    <item android:drawable="@drawable/rc_my_bg_rect_corners_gray02" android:state_pressed="true"/>
+    <item android:drawable="@drawable/rc_my_bg_rect_corners_gray01"/>
+</selector>

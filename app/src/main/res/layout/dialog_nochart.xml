@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:gravity="center"
+        android:background="@color/white">
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/color_text_main_black"
+                android:layout_weight="1"
+                android:text="聊天室（当前聊天:500人）"/>
+            <ImageView
+                android:id="@+id/dialog_hemai_cancle"
+                android:padding="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/x"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="55dp"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/color_text_main_gray"
+            android:text="彩票达人、购彩大神、新手菜鸟都在这里进来看看大家都在聊些什么吧"/>
+        <FrameLayout
+            android:layout_marginBottom="55dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:id="@+id/dialog_hemai_ok"
+            android:background="@drawable/ripple_bt_orange"
+            android:layout_width="wrap_content"
+            android:clickable="true"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:text="加入聊天"/>
+        </FrameLayout>
+    </LinearLayout>
+
+</FrameLayout>

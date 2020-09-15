@@ -1,0 +1,285 @@
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+        applicationId "com.wanhao.ticketver"
+        minSdkVersion 17
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        useLibrary 'org.apache.http.legacy'
+        multiDexEnabled true
+        ndk {
+            abiFilters 'armeabi'
+        }
+        manifestPlaceholders = [package_name        : applicationId,
+                                rongcloud_name      : 'mgb7ka1nme0pg',
+                                provider_authorities: applicationId + '.FileProvider',
+                                MTA_APPKEY: "aaaaaaaaa", MTA_CHANNEL: "ticket_wanhao"]
+//        sourceSets {
+//            main {
+//                jniLibs.srcDirs = ['libs']
+//            }
+//            lbn {
+//                res.srcDirs = ['flavors/lbn/res']
+//                manifestPlaceholders = [MTA_APPKEY: "aaaaaaaaa", MTA_CHANNEL: "ticket_lbn"]
+//            }
+//            bosheng {
+//                res.srcDirs = ['flavors/bosheng/res']
+//                manifestPlaceholders = [MTA_APPKEY: "aaaaaaaaa", MTA_CHANNEL: "ticket_bosheng"]
+//            }
+//            tongxing {
+//                res.srcDirs = ['flavors/tongxing/res']
+//                manifestPlaceholders = [MTA_APPKEY: "aaaaaaaaa", MTA_CHANNEL: "ticket_tongxing"]
+//            }
+//            yunshang {
+//                res.srcDirs = ['flavors/yunshang/res']
+//                manifestPlaceholders = [MTA_APPKEY: "aaaaaaaaa", MTA_CHANNEL: "ticket_yunshang"]
+//            }
+//            xincheng {
+//                res.srcDirs = ['flavors/xincheng/res']
+//                manifestPlaceholders = [MTA_APPKEY: "aaaaaaaaa", MTA_CHANNEL: "ticket_xincheng"]
+//            }
+//            xincheng2 {
+//                res.srcDirs = ['flavors/xincheng2/res']
+//                manifestPlaceholders = [MTA_APPKEY: "aaaaaaaaa", MTA_CHANNEL: "ticket_xincheng2"]
+//            }
+//            tianyun {
+//                res.srcDirs = ['flavors/tianyun/res']
+//                manifestPlaceholders = [MTA_APPKEY: "aaaaaaaaa", MTA_CHANNEL: "ticket_tianyun"]
+//            }
+//            tianxi {
+//                res.srcDirs = ['flavors/tianxi/res']
+//                manifestPlaceholders = [MTA_APPKEY: "aaaaaaaaa", MTA_CHANNEL: "ticket_tianxi"]
+//            }
+//            hengsheng {
+//                res.srcDirs = ['flavors/hengsheng/res']
+//                manifestPlaceholders = [MTA_APPKEY: "aaaaaaaaa", MTA_CHANNEL: "ticket_hengsheng"]
+//            }
+//            tianyu {
+//                res.srcDirs = ['flavors/tianyu/res']
+//                manifestPlaceholders = [MTA_APPKEY: "aaaaaaaaa", MTA_CHANNEL: "ticket_tianyu"]
+//            }
+//            jiahe {
+//                res.srcDirs = ['flavors/jiahe/res']
+//                manifestPlaceholders = [MTA_APPKEY: "aaaaaaaaa", MTA_CHANNEL: "ticket_jiahe"]
+//            }
+//            tusheng {
+//                res.srcDirs = ['flavors/tusheng/res']
+//                manifestPlaceholders = [MTA_APPKEY: "aaaaaaaaa", MTA_CHANNEL: "ticket_tusheng"]
+//            }
+//            hongwang {
+//                res.srcDirs = ['flavors/hongwang/res']
+//                manifestPlaceholders = [MTA_APPKEY: "aaaaaaaaa", MTA_CHANNEL: "ticket_hongwang"]
+//            }
+//            shifu {
+//                res.srcDirs = ['flavors/shifu/res']
+//                manifestPlaceholders = [MTA_APPKEY: "aaaaaaaaa", MTA_CHANNEL: "ticket_shifu"]
+//            }
+//            jiuyou {
+//                res.srcDirs = ['flavors/jiuyou/res']
+//                manifestPlaceholders = [MTA_APPKEY: "aaaaaaaaa", MTA_CHANNEL: "ticket_jiuyou"]
+//            }
+//        }
+    }
+    signingConfigs {
+        myConfig {
+            //绝对路径和相对路径都可以
+            storeFile file("G:/AndroidStudioProjects/chunge/key/ticketVerKey.jks")
+            storePassword "ticketVer888888"
+            keyAlias "ticketVierKey0"
+            keyPassword "ticketVer888888"
+        }
+    }
+    buildTypes {
+        release {
+            signingConfig signingConfigs.myConfig
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dependencies {
+        implementation fileTree(dir: 'libs', include: ['*.jar'])
+        implementation 'com.android.support:appcompat-v7:25.3.0'
+        implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+        testImplementation 'junit:junit:4.12'
+        androidTestImplementation 'com.android.support.test:runner:0.5'
+        androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+            exclude group: 'com.android.support', module: 'support-annotations'
+        })
+        implementation project(':library')
+        implementation project(':photopicker')
+        implementation 'de.hdodenhof:circleimageview:2.2.0'
+        implementation 'com.github.bumptech.glide:glide:3.7.0'
+        implementation project(':IMKit')
+        implementation 'com.readystatesoftware.systembartint:systembartint:1.0.3'
+        implementation 'com.github.lecho:hellocharts-android:v1.5.8'
+        implementation 'com.qq.mta:mta:3.1.41-alpha'
+        implementation 'com.tencent.mid:mid:3.73-alpha'
+//        implementation 'com.tencent.bugly:crashreport:3.2.33'
+        implementation 'com.tencent.bugly:nativecrashreport:3.7.471'
+        implementation 'com.tencent.bugly:crashreport_upgrade:1.4.5'
+
+//        //umeng
+//        api  'com.umeng.umsdk:common:9.1.0'
+//        api  'com.umeng.umsdk:share-core:7.0.2'
+//        api  'com.umeng.umsdk:share-board:7.0.2'
+////    api  'com.umeng.umsdk:share-qq:7.0.2'
+//        api  'com.umeng.umsdk:share-wx:7.0.2'
+    }
+//    flavorDimensions "lbn"
+//    flavorDimensions "bosheng"
+//    flavorDimensions "tongxing"
+//    flavorDimensions "yunshang"
+//    flavorDimensions "xincheng"
+//    flavorDimensions "xincheng2"
+//    flavorDimensions "tianyun"
+//    flavorDimensions "tianxi"
+//    flavorDimensions "hengsheng"
+//    flavorDimensions "tianyu"
+//    flavorDimensions "jiahe"
+//    flavorDimensions "tusheng"
+//    flavorDimensions "hongwang"
+//    flavorDimensions "shifu"
+//    flavorDimensions "jiuyou"
+//    productFlavors {
+//        lbn {
+//            applicationId = "com.lbn"
+//            manifestPlaceholders = [package_name        : applicationId,
+//                                    rongcloud_name      : 'mgb7ka1nme0pg',
+//                                    provider_authorities: applicationId + '.FileProvider']
+//            buildConfigField "String", "ENDPOINT", "\"http://122.114.58.37:9750/\""
+//            buildConfigField "String", "ENDPOINT_ID", "\"--\""
+//            versionName '1.0.0'
+//        }
+//        bosheng {
+//            applicationId = "com.bosheng"
+//            manifestPlaceholders = [package_name        : applicationId,
+//                                    rongcloud_name      : 'mgb7ka1nme0pg',
+//                                    provider_authorities: applicationId + '.FileProvider']
+//            buildConfigField "String", "ENDPOINT", "\"--\""
+//            buildConfigField "String", "ENDPOINT_ID", "\"11\""
+//            versionName '1.0.1'
+//        }
+//        tongxing {
+//            applicationId = "com.tongxing"
+//            manifestPlaceholders = [package_name        : applicationId,
+//                                    rongcloud_name      : 'mgb7ka1nme0pg',
+//                                    provider_authorities: applicationId + '.FileProvider']
+//            buildConfigField "String", "ENDPOINT", "\"--\""
+//            buildConfigField "String", "ENDPOINT_ID", "\"1201\""
+//            versionName '1.0.0'
+//        }
+//        yunshang {
+//            applicationId = "com.yunshang"
+//            manifestPlaceholders = [package_name        : applicationId,
+//                                    rongcloud_name      : 'mgb7ka1nme0pg',
+//                                    provider_authorities: applicationId + '.FileProvider']
+//            buildConfigField "String", "ENDPOINT", "\"--\""
+//            buildConfigField "String", "ENDPOINT_ID", "\"13\""
+//            versionName '1.0.0'
+//        }
+//        xincheng {
+//            applicationId = "com.xincheng"
+//            manifestPlaceholders = [package_name        : applicationId,
+//                                    rongcloud_name      : 'mgb7ka1nme0pg',
+//                                    provider_authorities: applicationId + '.FileProvider']
+//            buildConfigField "String", "ENDPOINT", "\"--\""
+//            buildConfigField "String", "ENDPOINT_ID", "\"1401\""
+//            versionName '1.0.0'
+//        }
+//        xincheng2 {
+//            applicationId = "com.xincheng2"
+//            manifestPlaceholders = [package_name        : applicationId,
+//                                    rongcloud_name      : 'mgb7ka1nme0pg',
+//                                    provider_authorities: applicationId + '.FileProvider']
+//            buildConfigField "String", "ENDPOINT", "\"--\""
+//            buildConfigField "String", "ENDPOINT_ID", "\"15\""
+//            versionName '1.0.0'
+//        }
+//        tianyun {
+//            applicationId = "com.tianyun"
+//            manifestPlaceholders = [package_name        : applicationId,
+//                                    rongcloud_name      : 'mgb7ka1nme0pg',
+//                                    provider_authorities: applicationId + '.FileProvider']
+//            buildConfigField "String", "ENDPOINT", "\"--\""
+//            buildConfigField "String", "ENDPOINT_ID", "\"1601\""
+//            versionName '1.0.0'
+//        }
+//        tianxi {
+//            applicationId = "com.tianxi"
+//            manifestPlaceholders = [package_name        : applicationId,
+//                                    rongcloud_name      : 'mgb7ka1nme0pg',
+//                                    provider_authorities: applicationId + '.FileProvider']
+//            buildConfigField "String", "ENDPOINT", "\"--\""
+//            buildConfigField "String", "ENDPOINT_ID", "\"17\""
+//            versionName '1.0.0'
+//        }
+//        hengsheng {
+//            applicationId = "com.hengsheng"
+//            manifestPlaceholders = [package_name        : applicationId,
+//                                    rongcloud_name      : 'mgb7ka1nme0pg',
+//                                    provider_authorities: applicationId + '.FileProvider']
+//            buildConfigField "String", "ENDPOINT", "\"--\""
+//            buildConfigField "String", "ENDPOINT_ID", "\"18\""
+//            versionName '1.0.0'
+//        }
+//        tianyu {
+//            applicationId = "com.tianyu"
+//            manifestPlaceholders = [package_name        : applicationId,
+//                                    rongcloud_name      : 'mgb7ka1nme0pg',
+//                                    provider_authorities: applicationId + '.FileProvider']
+//            buildConfigField "String", "ENDPOINT", "\"--\""
+//            buildConfigField "String", "ENDPOINT_ID", "\"2201\""
+//            versionName '1.0.0'
+//        }
+//        jiahe {
+//            applicationId = "com.jiahe"
+//            manifestPlaceholders = [package_name        : applicationId,
+//                                    rongcloud_name      : 'mgb7ka1nme0pg',
+//                                    provider_authorities: applicationId + '.FileProvider']
+//            buildConfigField "String", "ENDPOINT", "\"--\""
+//            buildConfigField "String", "ENDPOINT_ID", "\"19\""
+//            versionName '1.0.0'
+//        }
+//        tusheng {
+//            applicationId = "com.tusheng"
+//            manifestPlaceholders = [package_name        : applicationId,
+//                                    rongcloud_name      : 'mgb7ka1nme0pg',
+//                                    provider_authorities: applicationId + '.FileProvider']
+//            buildConfigField "String", "ENDPOINT", "\"--\""
+//            buildConfigField "String", "ENDPOINT_ID", "\"20\""
+//            versionName '1.0.0'
+//        }
+//        hongwang {
+//            applicationId = "com.hongwang"
+//            manifestPlaceholders = [package_name        : applicationId,
+//                                    rongcloud_name      : 'mgb7ka1nme0pg',
+//                                    provider_authorities: applicationId + '.FileProvider']
+//            buildConfigField "String", "ENDPOINT", "\"--\""
+//            buildConfigField "String", "ENDPOINT_ID", "\"21\""
+//            versionName '1.0.0'
+//        }
+//        shifu {
+//            applicationId = "com.shifu"
+//            manifestPlaceholders = [package_name        : applicationId,
+//                                    rongcloud_name      : 'mgb7ka1nme0pg',
+//                                    provider_authorities: applicationId + '.FileProvider']
+//            buildConfigField "String", "ENDPOINT", "\"--\""
+//            buildConfigField "String", "ENDPOINT_ID", "\"1801\""
+//            versionName '1.0.0'
+//        }
+//        jiuyou {
+//            applicationId = "com.jiuyou"
+//            manifestPlaceholders = [package_name        : applicationId,
+//                                    rongcloud_name      : 'mgb7ka1nme0pg',
+//                                    provider_authorities: applicationId + '.FileProvider']
+//            buildConfigField "String", "ENDPOINT", "\"--\""
+//            buildConfigField "String", "ENDPOINT_ID", "\"23\""
+//            versionName '1.0.0'
+//        }
+//    }
+}
+
